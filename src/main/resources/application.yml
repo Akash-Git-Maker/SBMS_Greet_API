@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: greet-api # Updated to a valid hostname
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
